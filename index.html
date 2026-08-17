@@ -1388,275 +1388,356 @@ textarea {
 
           <!-- Form -->
 
-          <form
-            id="estimateForm"
-            class="mt-4 space-y-2.5"
-          >
+        <form
+  id="estimateForm"
+  action="https://formspree.io/f/YOUR_FORM_ID"
+  method="POST"
+  class="mt-4 space-y-2.5"
+>
 
-            <!-- NAME -->
+  <!-- SUBJECT -->
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Gati Express Packers & Movers Enquiry"
+  />
 
-            <div
-              class="flex h-10
-                     items-center gap-2.5
-                     rounded-xl
-                     border border-gray-200
-                     bg-[#F8F8F7]
-                     px-3
-                     focus-within:border-gati-yellow
-                     focus-within:ring-2
-                     focus-within:ring-gati-yellow/10"
-            >
+  <!-- NAME -->
 
-              <i
-                data-lucide="user-round"
-                class="h-3.5 w-3.5
-                       shrink-0 text-gray-400"
-              ></i>
+  <div
+    class="flex h-10
+           items-center gap-2.5
+           rounded-xl
+           border border-gray-200
+           bg-[#F8F8F7]
+           px-3
+           focus-within:border-gati-yellow
+           focus-within:ring-2
+           focus-within:ring-gati-yellow/10"
+  >
 
-              <input
-                type="text"
-                id="customerName"
-                name="name"
-                required
-                placeholder="Your name"
-                class="w-full bg-transparent
-                       text-[10px]
-                       font-medium
-                       text-gati-dark
-                       outline-none
-                       placeholder:text-gray-400"
-              />
+    <i
+      data-lucide="user-round"
+      class="h-3.5 w-3.5
+             shrink-0 text-gray-400"
+    ></i>
 
-            </div>
+    <input
+      type="text"
+      id="customerName"
+      name="name"
+      required
+      autocomplete="name"
+      placeholder="Your name"
+      class="w-full bg-transparent
+             text-[10px]
+             font-medium
+             text-gati-dark
+             outline-none
+             placeholder:text-gray-400"
+    />
 
-
-            <!-- MOBILE -->
-
-            <div
-              class="flex h-10
-                     items-center gap-2.5
-                     rounded-xl
-                     border border-gray-200
-                     bg-[#F8F8F7]
-                     px-3
-                     focus-within:border-gati-yellow
-                     focus-within:ring-2
-                     focus-within:ring-gati-yellow/10"
-            >
-
-              <i
-                data-lucide="smartphone"
-                class="h-3.5 w-3.5
-                       shrink-0 text-gray-400"
-              ></i>
-
-              <span
-                class="border-r
-                       border-gray-200
-                       pr-2 text-[9px]
-                       font-semibold
-                       text-gray-500"
-              >
-                +91
-              </span>
-
-              <input
-                type="tel"
-                id="customerMobile"
-                name="mobile"
-                required
-                maxlength="10"
-                inputmode="numeric"
-                placeholder="Mobile number"
-                class="w-full bg-transparent
-                       text-[10px]
-                       font-medium
-                       text-gati-dark
-                       outline-none
-                       placeholder:text-gray-400"
-              />
-
-            </div>
+  </div>
 
 
-            <!-- FROM + TO -->
+  <!-- MOBILE -->
 
-            <div
-              class="grid grid-cols-2 gap-2"
-            >
+  <div
+    class="flex h-10
+           items-center gap-2.5
+           rounded-xl
+           border border-gray-200
+           bg-[#F8F8F7]
+           px-3
+           focus-within:border-gati-yellow
+           focus-within:ring-2
+           focus-within:ring-gati-yellow/10"
+  >
 
-              <!-- FROM -->
+    <i
+      data-lucide="smartphone"
+      class="h-3.5 w-3.5
+             shrink-0 text-gray-400"
+    ></i>
 
-              <div
-                class="flex h-10
-                       items-center gap-2
-                       rounded-xl
-                       border border-gray-200
-                       bg-[#F8F8F7]
-                       px-3
-                       focus-within:border-gati-yellow
-                       focus-within:ring-2
-                       focus-within:ring-gati-yellow/10"
-              >
+    <span
+      class="border-r
+             border-gray-200
+             pr-2 text-[9px]
+             font-semibold
+             text-gray-500"
+    >
+      +91
+    </span>
 
-                <i
-                  data-lucide="circle-dot"
-                  class="h-3.5 w-3.5
-                         shrink-0
-                         text-gati-yellow"
-                ></i>
+    <input
+      type="tel"
+      id="customerMobile"
+      name="mobile"
+      required
+      maxlength="10"
+      minlength="10"
+      pattern="[6-9][0-9]{9}"
+      inputmode="numeric"
+      autocomplete="tel"
+      placeholder="Mobile number"
+      class="w-full bg-transparent
+             text-[10px]
+             font-medium
+             text-gati-dark
+             outline-none
+             placeholder:text-gray-400"
+    />
 
-                <input
-                  type="text"
-                  id="movingFrom"
-                  name="from"
-                  required
-                  placeholder="From"
-                  class="w-full min-w-0
-                         bg-transparent
-                         text-[10px]
-                         font-medium
-                         text-gati-dark
-                         outline-none
-                         placeholder:text-gray-400"
-                />
-
-              </div>
-
-
-              <!-- TO -->
-
-              <div
-                class="flex h-10
-                       items-center gap-2
-                       rounded-xl
-                       border border-gray-200
-                       bg-[#F8F8F7]
-                       px-3
-                       focus-within:border-gati-yellow
-                       focus-within:ring-2
-                       focus-within:ring-gati-yellow/10"
-              >
-
-                <i
-                  data-lucide="map-pin"
-                  class="h-3.5 w-3.5
-                         shrink-0
-                         text-red-400"
-                ></i>
-
-                <input
-                  type="text"
-                  id="movingTo"
-                  name="to"
-                  required
-                  placeholder="To"
-                  class="w-full min-w-0
-                         bg-transparent
-                         text-[10px]
-                         font-medium
-                         text-gati-dark
-                         outline-none
-                         placeholder:text-gray-400"
-                />
-
-              </div>
-
-            </div>
+  </div>
 
 
-            <!-- SHIFTING DATE -->
+  <!-- FROM + TO -->
 
-            <div
-              class="flex h-10
-                     items-center gap-2.5
-                     rounded-xl
-                     border border-gray-200
-                     bg-[#F8F8F7]
-                     px-3
-                     focus-within:border-gati-yellow
-                     focus-within:ring-2
-                     focus-within:ring-gati-yellow/10"
-            >
+  <div
+    class="grid grid-cols-2 gap-2"
+  >
 
-              <i
-                data-lucide="calendar-days"
-                class="h-3.5 w-3.5
-                       shrink-0 text-gray-400"
-              ></i>
+    <!-- FROM -->
 
-              <input
-                type="date"
-                id="shiftingDate"
-                name="date"
-                required
-                class="w-full
-                       bg-transparent
-                       text-[10px]
-                       font-medium
-                       text-gray-600
-                       outline-none"
-              />
+    <div
+      class="flex h-10
+             items-center gap-2
+             rounded-xl
+             border border-gray-200
+             bg-[#F8F8F7]
+             px-3
+             focus-within:border-gati-yellow
+             focus-within:ring-2
+             focus-within:ring-gati-yellow/10"
+    >
 
-            </div>
+      <i
+        data-lucide="circle-dot"
+        class="h-3.5 w-3.5
+               shrink-0
+               text-gati-yellow"
+      ></i>
 
+      <input
+        type="text"
+        id="movingFrom"
+        name="from"
+        required
+        autocomplete="address-level2"
+        placeholder="From"
+        class="w-full min-w-0
+               bg-transparent
+               text-[10px]
+               font-medium
+               text-gati-dark
+               outline-none
+               placeholder:text-gray-400"
+      />
 
-            <!-- SUBMIT -->
-
-            <button
-              type="submit"
-              class="group flex h-11
-                     w-full items-center
-                     justify-center gap-2
-                     rounded-xl
-                     bg-gati-yellow
-                     text-[10px]
-                     font-bold
-                     text-gati-dark
-                     shadow-lg
-                     shadow-yellow-400/20
-                     transition
-                     hover:-translate-y-0.5
-                     active:translate-y-0"
-            >
-
-              Get My Estimate
-
-              <i
-                data-lucide="arrow-right"
-                class="h-3.5 w-3.5
-                       transition
-                       group-hover:translate-x-0.5"
-              ></i>
-
-            </button>
+    </div>
 
 
-            <!-- Security -->
+    <!-- TO -->
 
-            <div
-              class="flex items-center
-                     justify-center gap-1.5"
-            >
+    <div
+      class="flex h-10
+             items-center gap-2
+             rounded-xl
+             border border-gray-200
+             bg-[#F8F8F7]
+             px-3
+             focus-within:border-gati-yellow
+             focus-within:ring-2
+             focus-within:ring-gati-yellow/10"
+    >
 
-              <i
-                data-lucide="shield-check"
-                class="h-3 w-3
-                       text-green-500"
-              ></i>
+      <i
+        data-lucide="map-pin"
+        class="h-3.5 w-3.5
+               shrink-0
+               text-red-400"
+      ></i>
 
-              <span
-                class="text-[7px]
-                       font-medium
-                       text-gray-400"
-              >
-                Your information is safe & secure
-              </span>
+      <input
+        type="text"
+        id="movingTo"
+        name="to"
+        required
+        autocomplete="address-level2"
+        placeholder="To"
+        class="w-full min-w-0
+               bg-transparent
+               text-[10px]
+               font-medium
+               text-gati-dark
+               outline-none
+               placeholder:text-gray-400"
+      />
 
-            </div>
+    </div>
 
-          </form>
+  </div>
 
+
+  <!-- SHIFTING DATE -->
+
+  <div
+    class="flex h-10
+           items-center gap-2.5
+           rounded-xl
+           border border-gray-200
+           bg-[#F8F8F7]
+           px-3
+           focus-within:border-gati-yellow
+           focus-within:ring-2
+           focus-within:ring-gati-yellow/10"
+  >
+
+    <i
+      data-lucide="calendar-days"
+      class="h-3.5 w-3.5
+             shrink-0 text-gray-400"
+    ></i>
+
+    <input
+      type="date"
+      id="shiftingDate"
+      name="shifting_date"
+      required
+      class="w-full
+             bg-transparent
+             text-[10px]
+             font-medium
+             text-gray-600
+             outline-none"
+    />
+
+  </div>
+
+
+  <!-- SUBMIT -->
+
+  <button
+    id="estimateSubmit"
+    type="submit"
+    class="group flex h-11
+           w-full items-center
+           justify-center gap-2
+           rounded-xl
+           bg-gati-yellow
+           text-[10px]
+           font-bold
+           text-gati-dark
+           shadow-lg
+           shadow-yellow-400/20
+           transition
+           hover:-translate-y-0.5
+           active:translate-y-0"
+  >
+
+    <span id="estimateButtonText">
+      Get My Estimate
+    </span>
+
+    <i
+      id="estimateButtonIcon"
+      data-lucide="arrow-right"
+      class="h-3.5 w-3.5
+             transition
+             group-hover:translate-x-0.5"
+    ></i>
+
+  </button>
+
+
+  <!-- SUCCESS MESSAGE -->
+
+  <div
+    id="estimateSuccess"
+    class="hidden rounded-xl
+           border border-green-200
+           bg-green-50
+           px-3 py-2.5
+           text-center"
+  >
+
+    <div
+      class="flex items-center
+             justify-center gap-2
+             text-green-700"
+    >
+
+      <i
+        data-lucide="circle-check"
+        class="h-4 w-4"
+      ></i>
+
+      <span
+        class="text-[11px]
+               font-semibold"
+      >
+        Request sent successfully!
+      </span>
+
+    </div>
+
+    <p
+      class="mt-1 text-[9px]
+             text-green-600"
+    >
+      Our moving expert will contact you shortly.
+    </p>
+
+  </div>
+
+
+  <!-- ERROR MESSAGE -->
+
+  <div
+    id="estimateError"
+    class="hidden rounded-xl
+           border border-red-200
+           bg-red-50
+           px-3 py-2.5
+           text-center"
+  >
+
+    <span
+      class="text-[10px]
+             font-semibold
+             text-red-600"
+    >
+      Something went wrong. Please try again.
+    </span>
+
+  </div>
+
+
+  <!-- Security -->
+
+  <div
+    class="flex items-center
+           justify-center gap-1.5"
+  >
+
+    <i
+      data-lucide="shield-check"
+      class="h-3 w-3
+             text-green-500"
+    ></i>
+
+    <span
+      class="text-[7px]
+             font-medium
+             text-gray-400"
+    >
+      Your information is safe & secure
+    </span>
+
+  </div>
+
+</form>
         </div>
 
       </div>
