@@ -1957,30 +1957,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* ========================================================
-     MOBILE NUMBER
-  ======================================================== */
-
-  const mobile =
-    document.getElementById(
-      "customerMobile"
-    );
-
-  if (mobile) {
-
-    mobile.addEventListener(
-      "input",
-      function () {
-
-        this.value =
-          this.value
-            .replace(/\D/g, "")
-            .slice(0, 10);
-
-      }
-    );
-
-  }
 
 
   /* ========================================================
@@ -2059,33 +2035,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /* ================================================
-           WHATSAPP MESSAGE
-        ================================================= */
-
-        const message =
-          `Hello Gati Express,%0A%0A` +
-          `I want a moving estimate.%0A%0A` +
-          `Name: ${encodeURIComponent(name)}%0A` +
-          `Mobile: ${encodeURIComponent(phone)}%0A` +
-          `From: ${encodeURIComponent(from)}%0A` +
-          `To: ${encodeURIComponent(to)}%0A` +
-          `Shifting Date: ${encodeURIComponent(date)}`;
-
-
-        const whatsapp =
-          "917003927437";
-
-
-        window.open(
-          `https://wa.me/${whatsapp}?text=${message}`,
-          "_blank"
-        );
-
-      }
-    );
-
-  }
+       
 
 
   /* ========================================================
